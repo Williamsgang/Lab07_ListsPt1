@@ -194,6 +194,49 @@ Define tests for at least 21 change scenarios, in addition to the 3 given as exa
     toString() returns "[A, B]"
 9) [A] -> add(B) -> [A,B]
 10) [A] -> add(0,B) -> [B,A]
+  Tests:
+    addToFront(C) throws no Exceptions
+    addToRear(C) throws no Exceptions
+    addAfter(C, B) throws no Exceptions
+    addAfter(C, A) throws no Exceptions
+    addAfter(C, D) throws NoSuchElementException
+    add(C) throws no Exception
+    add(-1,C) throws IndexOutOfBoundsException
+    add(0,C) throws no Exception
+    add(1,C) throws no Exception
+    add(2,C) throws no Exception
+    add(3,C) throws IndexOutOfBoundsException
+    removeFirst() returns B
+    removeLast() returns A
+    remove(A) returns A
+    remove(B) returns B
+    remove(C) throws NoSuchElementException
+    remove(-1) throws IndexOutOfBoundsException
+    remove(0) returns B
+    remove(1) returns A
+    remove(2) throws IndexOutOfBoundsException
+    set(-1,C) throws IndexOutOfBoundsException
+    set(0,C) throws no Exception
+    set(1,C) throws no Exception
+    set(2,C) throws IndexOutOfBoundsException
+    get(-1) throws IndexOutOfBoundsException
+    get(0) returns B
+    get(1) returns A
+    get(2) throws IndexOutOfBoundsException
+    indexOf(A) returns 1
+    indexOf(B) returns 0
+    indexOf(C) returns -1
+    first() returns B
+    last() returns A
+    contains(A) returns true
+    contains(B) returns true
+    contains(C) returns false
+    isEmpty() returns false
+    size() returns 2
+    iterator() returns an Iterator reference
+    listIterator() throws UnsupportedOperationException
+    listIterator(0) throws UnsupportedOperationException
+    toString() returns "[B, A]"
 11) [A] -> add(1,B) -> [A,B]
 12) [A] -> removeFirst() -> []
   Tests:
@@ -315,6 +358,57 @@ Define tests for at least 21 change scenarios, in addition to the 3 given as exa
 21) [A,B] -> add(C) -> [A,B,C]
 22) [A,B] -> add(0,C) -> [C,A,B]
 23) [A,B] -> add(1,C) -> [A,C,B]
+  Tests:
+    addToFront(D) throws no Exceptions
+    addToRear(D) throws no Exceptions
+    addAfter(D, A) throws no Exceptions
+    addAfter(D, C) throws no Exceptions
+    addAfter(D, B) throws no Exceptions
+    addAfter(D, E) throws NoSuchElementException
+    add(D) throws no Exception
+    add(-1,D) throws IndexOutOfBoundsException
+    add(0,D) throws no Exception
+    add(1,D) throws no Exception
+    add(2,D) throws no Exception
+    add(3,D) throws no Exception
+    add(4,D) throws IndexOutOfBoundsException
+    removeFirst() returns A
+    removeLast() returns B
+    remove(A) returns A
+    remove(B) returns B
+    remove(C) returns C
+    remove(D) throws NoSuchElementException
+    remove(-1) throws IndexOutOfBoundsException
+    remove(0) returns A
+    remove(1) returns C
+    remove(2) returns B
+    remove(3) throws IndexOutOfBoundsException
+    set(-1,D) throws IndexOutOfBoundsException
+    set(0,D) throws no Exception
+    set(1,D) throws no Exception
+    set(2,D) throws no Exception
+    set(3,D) throws IndexOutOfBoundsException
+    get(-1) throws IndexOutOfBoundsException
+    get(0) returns A
+    get(1) returns C
+    get(2) returns B
+    get(3) throws IndexOutOfBoundsException
+    indexOf(A) returns 0
+    indexOf(B) returns 2
+    indexOf(C) returns 1
+    indexOf(D) returns -1
+    first() returns A
+    last() returns B
+    contains(A) returns true
+    contains(B) returns true
+    contains(C) returns true
+    contains(D) returns false
+    isEmpty() returns false
+    size() returns 3
+    iterator() returns an Iterator reference
+    listIterator() throws UnsupportedOperationException
+    listIterator(0) throws UnsupportedOperationException
+    toString() returns "[A, C, B]"
 24) [A,B] -> add (2,C) -> [A,B,C]
 25) [A,B] -> removeFirst() -> [B] // Still not finished, needs double checking
   Tests:
@@ -431,10 +525,96 @@ Define tests for at least 21 change scenarios, in addition to the 3 given as exa
 31) [A,B] -> set(0,C) -> [C,B]
 32) [A,B] -> set(1,C) -> [A,C]
 33) [A,B,C] -> removeFirst() -> [B,C]
+  Tests:
+    addToFront(A) throws no Exceptions
+    addToRear(A) throws no Exceptions
+    addAfter(A, B) throws no Exceptions
+    addAfter(A, C) throws no Exceptions
+    addAfter(A, D) throws NoSuchElementException
+    add(A) throws no Exception
+    add(-1,A) throws IndexOutOfBoundsException
+    add(0,A) throws no Exception
+    add(1,A) throws no Exception
+    add(2,A) throws no Exception
+    add(3,A) throws IndexOutOfBoundsException
+    removeFirst() returns B
+    removeLast() returns C
+    remove(B) returns B
+    remove(C) returns C
+    remove(A) throws NoSuchElementException
+    remove(-1) throws IndexOutOfBoundsException
+    remove(0) returns B
+    remove(1) returns C
+    remove(2) throws IndexOutOfBoundsException
+    set(-1,A) throws IndexOutOfBoundsException
+    set(0,A) throws no Exception
+    set(1,A) throws no Exception
+    set(2,A) throws IndexOutOfBoundsException
+    get(-1) throws IndexOutOfBoundsException
+    get(0) returns B
+    get(1) returns C
+    get(2) throws IndexOutOfBoundsException
+    indexOf(B) returns 1
+    indexOf(C) returns 0
+    indexOf(A) returns -1
+    first() returns B
+    last() returns C
+    contains(B) returns true
+    contains(C) returns true
+    contains(A) returns false
+    isEmpty() returns false
+    size() returns 2
+    iterator() returns an Iterator reference
+    listIterator() throws UnsupportedOperationException
+    listIterator(0) throws UnsupportedOperationException
+    toString() returns "[B, C]"
 34) [A,B,C] -> removeLast() -> [A,B]
 35) [A,B,C] -> remove(A) -> [B,C]
 36) [A,B,C] -> remove(B) -> [A,C]
 37) [A,B,C] -> remove(C) -> [A,B]
+  Tests:
+    addToFront(C) throws no Exceptions
+    addToRear(C) throws no Exceptions
+    addAfter(C, A) throws no Exceptions
+    addAfter(C, B) throws no Exceptions
+    addAfter(C, D) throws NoSuchElementException
+    add(C) throws no Exception
+    add(-1,C) throws IndexOutOfBoundsException
+    add(0,C) throws no Exception
+    add(1,C) throws no Exception
+    add(2,C) throws no Exception
+    add(3,C) throws IndexOutOfBoundsException
+    removeFirst() returns A
+    removeLast() returns B
+    remove(A) returns A
+    remove(B) returns B
+    remove(C) throws NoSuchElementException
+    remove(-1) throws IndexOutOfBoundsException
+    remove(0) returns A
+    remove(1) returns B
+    remove(2) throws IndexOutOfBoundsException
+    set(-1,C) throws IndexOutOfBoundsException
+    set(0,C) throws no Exception
+    set(1,C) throws no Exception
+    set(2,C) throws IndexOutOfBoundsException
+    get(-1) throws IndexOutOfBoundsException
+    get(0) returns A
+    get(1) returns B
+    get(2) throws IndexOutOfBoundsException
+    indexOf(A) returns 0
+    indexOf(B) returns 1
+    indexOf(C) returns -1
+    first() returns A
+    last() returns B
+    contains(A) returns true
+    contains(B) returns true
+    contains(C) returns false
+    isEmpty() returns false
+    size() returns 2
+    iterator() returns an Iterator reference
+    listIterator() throws UnsupportedOperationException
+    listIterator(0) throws UnsupportedOperationException
+    toString() returns "[A, B]"
 38) [A,B,C] -> remove(0) -> [B,C]
 39) [A,B,C] -> remove(1) -> [A,C]
   Tests:
