@@ -352,7 +352,7 @@ Define tests for at least 21 change scenarios, in addition to the 3 given as exa
     iterator() returns an Iterator reference
     listIterator() throws UnsupportedOperationException
     listIterator(0) throws UnsupportedOperationException
-    toString() returns "[A, B]"
+    toString() returns "[B]"
 26) [A,B] -> removeLast() -> [A] // Still not finished, needs double checking
   Tests:
     addToFront(C) throws no Exception
