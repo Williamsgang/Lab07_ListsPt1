@@ -1,3 +1,5 @@
+import java.util.*;
+
 /**
  *  Interface for an Iterable, Indexed, Unsorted List ADT.
  *  Iterators and ListIterators provided by the list are required
@@ -10,8 +12,6 @@
  *
  * @param <T> - class of objects stored in the list 
  */
-import java.util.*;
-
 public interface IndexedUnsortedList<T> extends Iterable<T>
 {
     /**  
@@ -22,16 +22,16 @@ public interface IndexedUnsortedList<T> extends Iterable<T>
     public void addToFront(T element);  
 
     /**  
-     * Adds the specified element to the rear of this list. This is the same as the add() method.
+     * Adds the specified element to the rear of this list. 
      *
-     * @param element the element to be added to the rear of this list   
+     * @param element the element to be added to the rear of this list    
      */
     public void addToRear(T element); 
 
     /**  
-     * Adds the specified element to the rear of this list. This is the same as the addToRear() method.
+     * Adds the specified element to the rear of this list. 
      *
-     * @param element  the element to be added to the rear of the list  
+     * @param element  the element to be added to the rear of the list    
      */
     public void add(T element);
 
